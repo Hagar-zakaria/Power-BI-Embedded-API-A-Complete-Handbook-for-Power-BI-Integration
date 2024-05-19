@@ -27,6 +27,7 @@ For example, embedding Power BI content in a web app using JavaScript involves s
 
 In your HTML file, include the Power BI JavaScript library using the provided CDN link:   
 
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,4 +46,4 @@ In your HTML file, include the Power BI JavaScript library using the provided CD
     <script src="app.js"></script>
 </body>
 </html>
-
+```
