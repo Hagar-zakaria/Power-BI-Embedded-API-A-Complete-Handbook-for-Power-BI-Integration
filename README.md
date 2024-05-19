@@ -1,6 +1,8 @@
 # Power-BI-Embedded-API-A-Complete-Handbook-for-Power-BI-Integration
 Embed Power BI reports/dashboards into your apps seamlessly using Power BI Embedded. This Microsoft service offers APIs enabling developers to integrate Power BI content effortlessly. For instance, integrate sales reports directly into a sales management app interface.
 
+![image](https://github.com/Hagar-zakaria/Power-BI-Embedded-API-A-Complete-Handbook-for-Power-BI-Integration/assets/93611934/a247d5c1-905a-498e-b2b2-3b34c509b8fb)
+
 # Key features of Power BI Embedded API:
 
 1. Embedding Reports and Dashboards: Easily integrate Power BI reports and dashboards into custom apps for seamless user interaction.
@@ -14,3 +16,11 @@ Embed Power BI reports/dashboards into your apps seamlessly using Power BI Embed
 5. Programmatic Interaction: Enable developers to interact programmatically with embedded Power BI content, facilitating tasks such as data filtering and event handling.
 
 For example, embedding Power BI content in a web app using JavaScript involves steps like including the Power BI JavaScript library and creating a JavaScript file to handle embedding logic. Customization and authentication methods can be implemented as needed for specific app requirements.
+
+
+# Prerequisites:
+
+1. You need a Power BI account Pro or Premium  and a workspace with the reports or dashboards you want to embed.
+2. Obtain an embed token and report/dashboard ID for the content you want to embed.
+
+   
