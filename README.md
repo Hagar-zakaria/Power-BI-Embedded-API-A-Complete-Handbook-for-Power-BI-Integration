@@ -186,3 +186,18 @@ reportRendered;
 
 </script>
 '''
+
+This JavaScript code is designed to embed a Power BI report into a web application. It sets up an embedding function embedPowerBIReport() responsible for configuring and embedding the report using Power BI's client library. Key elements, such as the report and group IDs, and the access token, are placeholders that need to be replaced with actual values corresponding to your Power BI report and authentication credentials. Once the script is embedded into the HTML file, it retrieves the necessary elements and embeds the report into the designated container. Event handlers are set up to handle various states of the embedding process. Users can customize the code by replacing placeholder values and adjusting the configuration settings according to their specific requirements, such as specifying permissions, adjusting layout, or handling error events.
+
+
+**Here are the features that need to be replaced:**
+
+1. Report ID (reportId): Replace "your_report_id_here" with the ID of your Power BI report.
+2. Group ID (groupId): Replace "your_groupId_here" with the ID of the group containing your Power BI report.
+3. Access Token (accessToken): Replace "your_access_token" with your Power BI access token.
+4. Embed URL (embedUrl): The embed URL is constructed dynamically based on the report and group IDs. No direct replacement needed.
+5. Other Configuration Settings: Depending on your requirements, you may want to adjust other settings such as permissions, layout, visibility of panes, and event handling. 6. These adjustments can be made directly within the code as needed.
+
+
+
+
