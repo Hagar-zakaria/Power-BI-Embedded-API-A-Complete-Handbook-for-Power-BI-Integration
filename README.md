@@ -218,13 +218,83 @@ Ensure that you replace the placeholder values in the script with actual values:
 2. groupId should be replaced with the ID of the group (workspace) that contains your report.
 3. accessToken should be replaced with a valid Power BI access token.
 
-**Authentication and Authorization:**
+**Setting up Azure Active Directory (Azure AD)**
+Setting up Azure Active Directory (Azure AD) involves several steps. Azure AD is Microsoft’s cloud-based identity and access management service, and it is commonly used for authenticating and authorizing users in various applications and services. Below is a basic guide to setting up Azure AD:
 
-1. This example provides a basic setup for embedding Power BI content. For a production environment, it is crucial to handle authentication and authorization securely on the server side.
-2. Implement secure methods to obtain and manage the access token to protect your data and ensure that only authorized users can access the embedded reports.
+## Step 1: Create an Azure Account
+If you don’t have an Azure account, sign up for one at the Azure portal.
 
-**Server-Side Security:**
+## Step 2: Create an Azure AD Tenant
+In the Azure portal, navigate to “Azure Active Directory” in the left-hand menu.
+Click on “Create a tenant.”
+Follow the prompts to create a new Azure AD tenant.
 
-1. In a real-world scenario, the access token generation and validation should be handled on the server side to prevent exposure of sensitive credentials in client-side code.
-2. Use appropriate security measures such as HTTPS, OAuth, and other best practices to safeguard your application and data.
+## Step 3: Register an Application in Azure AD
+1. In the Azure portal, go to “Azure Active Directory” > “App registrations.”
+2. Click on “New registration” and fill in the necessary information.
+- Name: Provide a name for your application.
+- Supported account types: Choose the appropriate option based on your requirements.
+3. Click “Register” to create the application.
 
+4. Make note of the “Application (client) ID” and “Directory (tenant) ID” as you’ll need these values later.
+
+## Step 4: Set Up API Permissions
+1. In the Azure portal, navigate to “Azure Active Directory” > “App registrations” > “Your app.”
+2. Under “Manage,” click on “API permissions.”
+3. Add the required permissions based on the services your application needs to access.
+
+## Step 5: Generate Client Secrets (if using a client secret)
+1. Navigate to Azure Active Directory:
+- Open the Azure portal.
+- Go to "Azure Active Directory."
+  
+2. Access App Registrations:
+- Within "Azure Active Directory," click on "App registrations."
+- Select your application from the list of registered apps.
+  
+3. Manage Certificates & Secrets:
+- In the left-hand menu, under "Manage," click on "Certificates & secrets."
+
+4. Generate a New Client Secret:
+- Click on the "New client secret" button.
+- Provide a description and choose an expiry duration for the secret.
+- Click "Add" to generate the client secret.
+
+5. Record the Client Secret Value:
+- Once the client secret is generated, make sure to copy and securely store the value immediately.
+- This client secret is essential for authenticating your application and will be required for integrating with Azure services.
+
+  ![image](https://github.com/Hagar-zakaria/Power-BI-Embedded-API-A-Complete-Handbook-for-Power-BI-Integration/assets/93611934/02c221bd-1e95-458e-9460-6dd30e268ee2)
+
+
+  ![image](https://github.com/Hagar-zakaria/Power-BI-Embedded-API-A-Complete-Handbook-for-Power-BI-Integration/assets/93611934/aa3b4cae-2af2-4a25-9148-c303ab8c6dfb)
+
+# Generate Access token:
+Here you will generate a token for azure ad this token you need to pass below curl request to generate a token to render Power BI report
+
+```
+curl --location 'https://login.microsoftonline.com/{tenantId}/oauth2/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--header 'Cookie: fpc=AhSZY3MTEn9DoaXYNpPjE4IU3E4LAQAAAEzCRd0OAAAA; stsservicecookie=estsfd; x-ms-gateway-slice=estsfd' \
+--data-urlencode 'grant_type=client_credentials' \
+--data-urlencode 'client_id=your_azure_ad_app_client_id' \
+--data-urlencode 'client_secret=azure_ad_app_client_secret' \
+--data-urlencode 'resource=https://analysis.windows.net/powerbi/api'
+```
+
+# Generate Access token:
+Here you need to generate token for rendering power bi report where you need to pass this token to above accessToken, variable in js file..
+
+```
+curl --location 'https://api.powerbi.com/v1.0/myorg/groups/{group_id}/reports/{report_id}/GenerateToken' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer {your_access_token}' \
+--header 'Content-Type: application/json' \
+--data '{
+    "accessLevel": "View"
+}'
+```
+
+
+# Test Your Application
+Test your application to ensure that Azure AD authentication is working correctly.
