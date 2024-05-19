@@ -78,7 +78,7 @@ In your HTML file, include the Power BI JavaScript library using the provided CD
 
 Create a JavaScript file named "app.js" to manage the embedding process. This file will house the script responsible for embedding the Power BI content into your application.
 
-```javascript
+```
 <script>
 //let loadedResolve, reportLoaded = new Promise((res, rej) => { loadedResolve = res; });
 let renderedResolve, reportRendered = new Promise((res, rej) => { renderedResolve = res; });
@@ -185,7 +185,7 @@ reportRendered;
 // Insert here the code you want to run after the report is rendered
 
 </script>
-
+'''
 
 This JavaScript code is designed to embed a Power BI report into a web application. It sets up an embedding function embedPowerBIReport() responsible for configuring and embedding the report using Power BI's client library. Key elements, such as the report and group IDs, and the access token, are placeholders that need to be replaced with actual values corresponding to your Power BI report and authentication credentials. Once the script is embedded into the HTML file, it retrieves the necessary elements and embeds the report into the designated container. Event handlers are set up to handle various states of the embedding process. Users can customize the code by replacing placeholder values and adjusting the configuration settings according to their specific requirements, such as specifying permissions, adjusting layout, or handling error events.
 
