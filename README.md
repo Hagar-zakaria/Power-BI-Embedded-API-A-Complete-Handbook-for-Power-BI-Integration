@@ -200,5 +200,31 @@ This JavaScript code is designed to embed a Power BI report into a web applicati
 5. Other Configuration Settings: Depending on your requirements, you may want to adjust other settings such as permissions, layout, visibility of panes, and event handling. 6. These adjustments can be made directly within the code as needed.
 
 
+# Step 3: Run the Application
 
+1. Open the HTML File:
+- Locate the HTML file you created in the previous steps.
+- Open this file using a web browser of your choice (such as Chrome, Firefox, or Edge).
+
+2. Verify Power BI Embedding:
+-Once the HTML file is opened in the web browser, you should see the Power BI content embedded within the specified container (<div id="embedContainer" style="height: 600px;"></div>).
+-This indicates that the Power BI report has been successfully embedded and should be interactive as defined by your configuration.
+
+**Important Considerations**
+
+ **Placeholder Values:**
+Ensure that you replace the placeholder values in the script with actual values:
+1. reportId should be replaced with your specific Power BI report ID.
+2. groupId should be replaced with the ID of the group (workspace) that contains your report.
+3. accessToken should be replaced with a valid Power BI access token.
+
+**Authentication and Authorization:**
+
+1. This example provides a basic setup for embedding Power BI content. For a production environment, it is crucial to handle authentication and authorization securely on the server side.
+2. Implement secure methods to obtain and manage the access token to protect your data and ensure that only authorized users can access the embedded reports.
+
+**Server-Side Security:**
+
+1. In a real-world scenario, the access token generation and validation should be handled on the server side to prevent exposure of sensitive credentials in client-side code.
+2. Use appropriate security measures such as HTTPS, OAuth, and other best practices to safeguard your application and data.
 
