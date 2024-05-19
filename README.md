@@ -52,21 +52,21 @@ In your HTML file, include the Power BI JavaScript library using the provided CD
 
 **Here's a breakdown in simple terms:**
 
- <!DOCTYPE html>: This tells the browser that the document is an HTML5 document.
+1.  !DOCTYPE html: This tells the browser that the document is an HTML5 document.
 
-<html lang="en">: This starts the HTML document and specifies that the primary language used is English.
+2. html lang="en": This starts the HTML document and specifies that the primary language used is English.
 
-<head>...</head>: This section contains metadata about the document, like character encoding and viewport settings. It also includes the title of the webpage.
+3. head>...</head: This section contains metadata about the document, like character encoding and viewport settings. It also includes the title of the webpage.
 
-<meta charset="UTF-8">: This specifies the character encoding of the document to be UTF-8, which supports a wide range of characters.
+4. meta charset="UTF-8": This specifies the character encoding of the document to be UTF-8, which supports a wide range of characters.
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">: This sets the viewport width to the width of the device and sets the initial zoom level to 1.0, ensuring proper scaling on mobile devices.
+5. meta name="viewport" content="width=device-width, initial-scale=1.0": This sets the viewport width to the width of the device and sets the initial zoom level to 1.0, ensuring proper scaling on mobile devices.
 
-<title>Power BI Embedded Example</title>: This sets the title of the webpage displayed in the browser tab.
+6. title>Power BI Embedded Example</title: This sets the title of the webpage displayed in the browser tab.
 
-<script src="..."></script>: These lines include JavaScript libraries needed for embedding Power BI content. You may need to replace the URLs with the actual URLs of the JavaScript libraries you're using.
+7. script src="..."/script: These lines include JavaScript libraries needed for embedding Power BI content. You may need to replace the URLs with the actual URLs of the JavaScript libraries you're using.
 
-<body>...</body>: This section contains the content of the webpage that users see. In this example, it includes a container with the ID "embedContainer" where the Power BI content will be embedded, and a script tag to include the application logic from an external JavaScript file (app.js).
+8. body.../body: This section contains the content of the webpage that users see. In this example, it includes a container with the ID "embedContainer" where the Power BI content will be embedded, and a script tag to include the application logic from an external JavaScript file (app.js).
 
 **To customize this code for your application, you'll typically replace the following features:**
 
