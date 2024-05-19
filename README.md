@@ -80,7 +80,7 @@ Create a JavaScript file named "app.js" to manage the embedding process. This fi
 
 ```javascript
 <script>
-let loadedResolve, reportLoaded = new Promise((res, rej) => { loadedResolve = res; });
+//let loadedResolve, reportLoaded = new Promise((res, rej) => { loadedResolve = res; });
 let renderedResolve, reportRendered = new Promise((res, rej) => { renderedResolve = res; });
 const reportId = "your_report_id_here";
 const groupId = "your_groupId_here";
