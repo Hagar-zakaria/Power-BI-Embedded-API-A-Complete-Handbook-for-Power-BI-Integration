@@ -23,4 +23,25 @@ For example, embedding Power BI content in a web app using JavaScript involves s
 1. You need a Power BI account Pro or Premium  and a workspace with the reports or dashboards you want to embed.
 2. Obtain an embed token and report/dashboard ID for the content you want to embed.
 
-   
+# Step 1: Incorporate the Power BI JavaScript Library
+
+In your HTML file, include the Power BI JavaScript library using the provided CDN link:   
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Embedded Example</title>
+    <!-- Include Power BI JavaScript library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
+    <script src="https://microsoft.github.io/PowerBI-JavaScript/demo/node_modules/powerbi-client/dist/powerbi.js"></script>
+</head>
+<body>
+    <!-- Your content goes here -->
+    <div id="embedContainer" style="height: 600px;"></div>
+
+    <!-- Include your application logic script -->
+    <script src="app.js"></script>
+</body>
+</html>
