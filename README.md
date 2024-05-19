@@ -47,3 +47,29 @@ In your HTML file, include the Power BI JavaScript library using the provided CD
 </body>
 </html>
 ```
+
+# **This HTML code sets up a webpage to embed Power BI content into a custom application.**
+
+**Here's a breakdown in simple terms:**
+
+1. <!DOCTYPE html>: This tells the browser that the document is an HTML5 document.
+
+2. <html lang="en">: This starts the HTML document and specifies that the primary language used is English.
+
+3. <head>...</head>: This section contains metadata about the document, like character encoding and viewport settings. It also includes the title of the webpage.
+
+4. <meta charset="UTF-8">: This specifies the character encoding of the document to be UTF-8, which supports a wide range of characters.
+
+5. <meta name="viewport" content="width=device-width, initial-scale=1.0">: This sets the viewport width to the width of the device and sets the initial zoom level to 1.0, ensuring proper scaling on mobile devices.
+
+6. <title>Power BI Embedded Example</title>: This sets the title of the webpage displayed in the browser tab.
+
+7. <script src="..."></script>: These lines include JavaScript libraries needed for embedding Power BI content. You may need to replace the URLs with the actual URLs of the JavaScript libraries you're using.
+
+8. <body>...</body>: This section contains the content of the webpage that users see. In this example, it includes a container with the ID "embedContainer" where the Power BI content will be embedded, and a script tag to include the application logic from an external JavaScript file (app.js).
+
+**To customize this code for your application, you'll typically replace the following features:**
+
+- Replace the <title> tag content with your desired webpage title.
+- Replace the <script> tags' src attribute URLs with the URLs of the JavaScript libraries you're using for Power BI embedding.
+- Customize the content within the <body> tag according to your application's needs, and replace "embedContainer" with the ID of the container where you want to embed the Power BI content.
